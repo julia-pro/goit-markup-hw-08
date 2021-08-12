@@ -1,0 +1,78 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms linear, visibility 250ms linear;
+
+  transform: scale(1);
+
+  overflow-y: scroll;
+}
+.is-hidden {
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // width: 528px;
+    // height: 580px;
+    padding: 40px;
+    background-color: var(--second-title-color);
+    transform: translate(-50%, -50%);
+  
+    border-radius: 4px;
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+      0 1px 1px 0 rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: 1200px) {
+       width: 450px;
+       height: 609px;
+       overflow: auto;
+     @media screen and (max-width: 459px) {
+       width: 95%;
+        }
+      @media screen and (max-height: 609px) {
+          height: 100%;
+        }
+      }
+  }
+
+  .close-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0px;
+  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      fill: var(--second-text-color);
+      }
+  }
+
+  // ************************** MOB *******************
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 320px;
+  }
+}

@@ -1,0 +1,144 @@
+.works-desc {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+.portfolio-h3 {
+  margin-bottom: 4px;
+  // font-style: normal;
+  // font-weight: bold;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+.portfolio-title {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--text-about);
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+  
+    padding-left: 0px;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  
+  .box-img {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: 100%;
+    // flex-basis: calc((100% - 96px) / 3);
+    // background: url(portfolio1.jpg);
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  
+  .box-img-title {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.55;
+    background-color: var(--second-text-color);
+    color: var(--second-title-color);
+    padding: 77px 24px;
+  
+    transform: translateY(101%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
+    .box-img-link:hover &,
+    .box-img-link:focus & {
+      transform: translateY(0%);
+      }
+    }
+
+    .box-img-link {
+    display: block;
+    text-decoration: none;
+    }
+ 
+
+  .shadow:hover,
+  .shadow:focus {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+      0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+ 
+ 
+
+  // ************************** MOB *******************
+
+ @media screen and (max-width: 479px) {
+    .overlay {
+      font-size: 14px;
+      padding: 15px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .box-img-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  // ************************ TABLET ***************************
+  
+  @media screen and (min-width: 768px) {
+  
+    .box-img {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 64px) / 2);
+      cursor: pointer;
+      
+      transition-property: box-shadow;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .works-desc {
+    min-width: 354px;
+    }
+  
+    .overlay {
+      padding: 49px 24px;
+    }
+  }
+  
+  // *********************** DESKTOP ********************
+  
+  @media screen and (min-width: 1200px) {
+    .box-img {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 96px) / 3);
+      cursor: pointer;
+  
+      transition-property: box-shadow;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .overlay {
+      padding: 63px 24px;
+    }
+    
+  }

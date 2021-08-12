@@ -1,0 +1,170 @@
+.clients {
+  text-align: center;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    border-color: var(--second-text-color);
+  }
+
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+    fill: var(--second-text-color);
+  }
+}
+
+.clients__icon {
+  max-width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// ************************** MOB *******************
+
+@media screen and (min-width: 320px) and (max-width: 479px)  {
+  .clients__link {
+    max-width: 130px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .clients__list {
+    flex-wrap: wrap;
+    padding-left: 0px;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .clients__link {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+// ************************ TABLET ***************************
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients__list {
+    flex-wrap: wrap;
+    padding-left: 0px;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .clients__link {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+    height: 92px;
+  }
+}
+
+// *********************** DESKTOP ********************
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .clients__link {
+    width: 170px;
+    height: 92px;
+  }
+}
+
+/* .cliens {
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
+  .clients__list {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+  
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+  
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+      border-color: var(--second-text-color);
+       }
+  }
+  
+  .clients__icon {
+    fill: #afb1b8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--second-text-color);
+    }
+  }
+  
+  /*---------MOB-------*/
+/*   @media screen and (min-width: 320px) and (max-width: 479px)  {
+    .clients__link {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 130px
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .clients__list {
+      flex-wrap: wrap;
+      padding-left: 0px;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+  
+    .clients__link {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 60px) / 2);
+    }
+  }  */
